@@ -9,23 +9,14 @@
         <h1><a href="/">Suraj Blog</a></h1>
     </div>
 
-    <div>
-        <p>published: 14.06.2018, 1:14</p>
-        <h2><a href="">My first post</a></h2>
-        <p>According to Lonely Planet’s Annual “Best in Travel List”, Nepal is the Best Value Destination to travel in the year 2017.
-            As per the publication, Nepal is speedily bouncing back from the twin earthquake and the fuel embargo imposed in the
-            year 2015. “It remains a fabulous choice for budget-conscious travelers, who can access the best of its world-famous
-            trekking routes and underrated wildlife for well south of US$ 50 a day. </p>
+    {% for post in posts %}
+        <div>
+            <p>published: {{ post.published_date }}</p>
+            <h1><a href="">{{ post.title }}</a></h1>
+            <p>{{ post.text|linebreaksbr }}</p>
+        </div>
+    {% endfor %}
 
-    </div>
-
-    <div>
-        <p>published: 14.06.2018, 2:14</p>
-        <h2><a href="">My second post</a></h2>
-        <p>Three things cannot be long hidden: the sun, the moon, and the truth.
-            The mind is everything. What you think you become.
-            You, yourself, as much as anybody in the entire universe, deserve your love and affection. </p>
-    </div>
 
 </body>
 </html>
